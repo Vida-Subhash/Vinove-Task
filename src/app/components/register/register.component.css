@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+mat-card {
+  height: 280px;
+  width: 30rem;
+  margin: 20px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.8;
+  z-index: 99;
+}

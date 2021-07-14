@@ -1,0 +1,16 @@
+.header {
+  height: 8vh;
+  }
+
+  .main-content{
+    height: 87vh;
+    overflow: hidden;
+  }
+
+  .footer{
+   height: 5vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #9FA8DA;
+ }
