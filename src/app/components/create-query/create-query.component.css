@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-rows: 7vh 80vh;
+}
+.main-content {
+    overflow-y: auto;
+    height: 80vh;
+}
+.example-full-width {
+
+  width: 100%;
+}
+
+.askbutton {
+ text-align: end;
+  padding-right: 20px;
+}
+
+.example-card {
+  max-width: auto;
+  margin: 10px;
+}

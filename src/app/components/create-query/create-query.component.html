@@ -1,1 +1,41 @@
-<p>create-query works!</p>
+<div class="container">
+  <div class="askbutton" *ngIf="isLoggedIn">
+    <button mat-raised-button (click)="openDialog()">Ask Query</button>
+  </div>
+  <div class="main-content">
+    <h3>Questions</h3>
+    <div class="questions"  >
+      <div *ngFor="let item of data">
+        <mat-card class="example-card">
+          <p style="font-weight: 500; font-size: 25px;">{{item?.title}}</p>
+          <p>{{item?.description}}</p>
+          <p>{{item?.tags}}&nbsp;</p>
+          <hr>
+          <h1>Answer </h1>
+          <div *ngIf="submittedAnswer">
+            <p *ngFor="let  answer of answers" >
+              > {{answer?.answers}}
+             </p>
+          </div>
+            <div style="text-align: end;" class="add-answer-btn" *ngIf="!isLoggedIn">
+              <button  mat-raised-button (click)="addAnswer()">Add Answer</button>
+            </div>
+          <div class="answer" *ngIf="isLoggedIn">
+            <!-- <h1>Answer </h1> -->
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Answer</mat-label>
+              <textarea  matInput placeholder="Enter answer" [formControl]="submittedAnswer"></textarea>
+              <!-- <mat-error >
+                You must provide a <strong>Description</strong>
+              </mat-error> -->
+            </mat-form-field>
+            <div style="text-align: end;">
+              <button  mat-raised-button (click)="submitAnswer(item.questionID)">Submit</button>
+            </div>
+          </div>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</div>

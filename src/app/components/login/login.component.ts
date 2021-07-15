@@ -21,9 +21,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.reactiveForm();
-    // this.authService.getUser().subscribe( res => {
-    //   this.userDetaisl = res;
-    // })
+    this.authService.getUser().subscribe( res => {
+      this.userDetaisl = res;
+    });
   }
 
   reactiveForm() {
@@ -37,19 +37,23 @@ export class LoginComponent implements OnInit {
     return this.myForm.controls[control].hasError(error);
   }
   submitForm() {
-    this.toastr.success("Login Success.");
-      // console.log(this.myForm.value);
-      //   this.userDetaisl.filter(ele => {
-      //     if(ele.email === this.myForm.value.email && ele.password === this.myForm.value.password) {
-      //       console.log("user found", ele);
-      //       // this.authService.isLoggedIn.next(true);
-      //       this.router.navigateByUrl('product');
-      //     } else {
-      //       this.toastr.error("Invalid Details");
-      //     }
-      //   });
+    console.log(this.myForm.value);
+    this.userDetaisl.filter(ele => {
+      if(ele.email === this.myForm.value.email && ele.password === this.myForm.value.password) {
+        console.log("user found", ele);
+        this.toastr.success("Login Success.");
+            this.authService.isLoggedIn.next(true);
+            this.authService.userName.next(ele.name);
+            console.log(ele.name);
+            this.router.navigateByUrl('query');
+          } else {
+            this.toastr.error("Invalid Details");
+          }
+        });
   }
 
-
+  registeredUser() {
+    this.router.navigateByUrl('register');
+  }
 
 }

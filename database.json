@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "UID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "name": "Subhash Ramshetty",
+      "email": "subhash.ramshetti9768@gmail.com",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "UID": "674072e2-c986-4ec0-ab0e-684fcb362ade",
+      "name": "Raju Sharma",
+      "email": "raju123@gmail.com",
+      "password": "12345",
+      "id": 3
+    }
+  ],
+  "query": [
+    {
+      "title": "How do I generate a UUID in Angular?",
+      "description": "However, the uuid package does not define a uuid class (type); it just provides utilities for generating and parsing UUIDs as strings, and for converting between string and byte array representations. So you will not be able to use the type system to ensure that values are valid UUIDs.",
+      "tags": "#angular,UUID ",
+      "questionID": "4aa06639-f6db-4eb7-9fe3-d68715c450cd",
+      "id": 1
+    }
+  ],
+  "answers": [
+    {
+      "questionID": "4aa06639-f6db-4eb7-9fe3-d68715c450cd",
+      "answerID": "8ab6fa6e-5e46-4d98-a816-04356d2d3f9c",
+      "answers": "> use NPM libaray",
+      "id": 3
+    }
+  ]
+}

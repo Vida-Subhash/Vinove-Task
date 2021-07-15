@@ -20,7 +20,7 @@ export class AuthGaurdService implements CanActivate {
       if(this.logged) {
         return true
       } else {
-        this.router.navigateByUrl('signing');
+        this.router.navigateByUrl('query');
         return false
       }
     }

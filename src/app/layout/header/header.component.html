@@ -1,10 +1,22 @@
 <mat-toolbar color="primary">
   <span>Task</span>
   <span class="example-spacer"></span>
-  <button style="padding-right: 20px;" mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+  <div *ngIf="!isLoggedIn">
+  <button (click)="login()" style="padding-right: 20px;" mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
     Login
   </button>
-  <button mat-button class="example-icon" aria-label="Example icon-button with share icon">
+  <button (click)="register()" mat-button class="example-icon" aria-label="Example icon-button with share icon">
    Register
   </button>
+</div>
+  <div *ngIf="isLoggedIn">
+    <span style="font-size: smaller;">{{userName}} </span>
+  <button  style="padding-right: 20px;" mat-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon [matBadgeHidden] = "parentData == 0"  matBadge="{{parentData}}" MatBadgeSize="large" matBadgeColor="warn"
+    >notifications</mat-icon>
+  </button>
+  <button (click)="logout()" mat-button class="example-icon" aria-label="Example icon-button with share icon">
+   Logout
+  </button>
+</div>
 </mat-toolbar>

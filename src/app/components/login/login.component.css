@@ -1,9 +1,10 @@
 .container {
-  height: 86vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
 mat-card {
   height: 200px;
   width: 30rem;

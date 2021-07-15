@@ -6,7 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
-    path: ' ',
+    path: '',
     redirectTo: '/query',
     pathMatch: 'full'
   },

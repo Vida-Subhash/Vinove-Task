@@ -2,7 +2,7 @@
   <mat-card>
     <mat-card-header>
       <div  class="example-header-image"></div>
-      <mat-card-title>User Registation</mat-card-title>
+      <mat-card-title>Login</mat-card-title>
     </mat-card-header>
   <form [formGroup]="myForm" #f="ngForm" (ngSubmit)="submitForm()" novalidate>
     <!-- Email -->
@@ -28,6 +28,8 @@
     <!-- Submit -->
   <div class="button-wrapper">
       <button mat-flat-button [disabled]="!f.valid" color="primary">Submit</button>
+      <button style="padding-left: 40px;" (click)="registeredUser()" mat-button type="button" [disableRipple]= "true" color="primary">Not Registered User? Register now</button>
+
     </div>
   </form>
   </mat-card>

@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Ask Query</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="example-form" [formGroup]="myForm" novalidate>
+    <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label> Title</mat-label>
+      <input formControlName="title" matInput placeholder="Enter title" >
+      <mat-error *ngIf="errorHandling('title', 'required')">
+        You must provide a <strong>Title</strong>
+      </mat-error>
+    </mat-form-field><br>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea  formControlName="description" matInput placeholder="Enter description"></textarea>
+      <mat-error *ngIf="errorHandling('description', 'required')">
+        You must provide a <strong>Description</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <p>
+    <i>Select a focused chip by pressing <code>SPACE</code></i>
+  </p>
+  <div>
+    <mat-form-field class="example-chip-list" appearance="fill">
+      <mat-label>Video keywords</mat-label>
+      <mat-chip-list #chipList aria-label="Add keywords" multiple [formControl]="formControl">
+        <mat-chip
+            *ngFor="let keyword of keywords"
+            [selected]="keyword"
+            [value]="keyword"
+            (removed)="removeKeyword(keyword)">
+          {{keyword}}
+        </mat-chip>
+        <input
+          placeholder="New keyword..."
+          [matChipInputFor]="chipList"
+          (matChipInputTokenEnd)="addKeywordFromInput($event)">
+      </mat-chip-list>
+    </mat-form-field>
+
+    <p>
+      <b>The following keywords are selected:</b> {{formControl.value}}
+    </p>
+  </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button [disabled]="!myForm.valid" (click)="submit()" [mat-dialog-close]="true" >Submit</button>
+</mat-dialog-actions>

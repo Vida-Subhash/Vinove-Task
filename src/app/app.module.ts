@@ -10,8 +10,10 @@ import { CreateQueryComponent } from './components/create-query/create-query.com
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MaterialModule } from './material/material.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { AskQuestionDialogComponent } from './components/ask-question-dialog/ask-question-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ToastrModule } from 'ngx-toastr';
     FooterComponent,
     CreateQueryComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AskQuestionDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +31,12 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [AskQuestionDialogComponent],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
