@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     this.reactiveForm();
     this.authService.getUser().subscribe( res => {
       this.userDetaisl = res;
+      console.log(this.userDetaisl);
     });
   }
 
@@ -44,6 +45,7 @@ export class LoginComponent implements OnInit {
         this.toastr.success("Login Success.");
             this.authService.isLoggedIn.next(true);
             this.authService.userName.next(ele.name);
+            this.authService.userID.next(ele.UID);
             console.log(ele.name);
             this.router.navigateByUrl('query');
           } else {

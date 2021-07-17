@@ -10,6 +10,7 @@ export class AuthService {
   public isLoading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public isLoggedIn: BehaviorSubject<boolean> =  new BehaviorSubject<boolean>(false);
   public userName: BehaviorSubject<string> =  new BehaviorSubject<string>('');
+  public userID: BehaviorSubject<string> =  new BehaviorSubject<string>('');
 constructor(private http: HttpClient) { }
 // User data is submitted
 postUser(data: any) {

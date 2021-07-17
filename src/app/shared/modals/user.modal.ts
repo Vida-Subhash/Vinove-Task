@@ -9,7 +9,7 @@ export interface Answered {
   quesid?: string;
   question?: string;
   userID?: string;
-  ansers?: answers[];
+  Allansers?: answers[];
 }
 
 export interface answers {

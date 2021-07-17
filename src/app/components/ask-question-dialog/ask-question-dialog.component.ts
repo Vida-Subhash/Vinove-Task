@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {MatChipInputEvent} from '@angular/material/chips';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 import { QueryService } from 'src/app/shared/services/query/query.service';
 //
 import {v4 as uuidv4} from "uuid";
@@ -13,11 +14,12 @@ import {v4 as uuidv4} from "uuid";
 export class AskQuestionDialogComponent implements OnInit  {
   keywords = new Set(['angular', 'html', 'css']);
   formControl = new FormControl(['angular']);
-
+  userID:any;
   myForm!: FormGroup;
   constructor(
     private fb: FormBuilder,
-    private queryService: QueryService
+    private queryService: QueryService,
+    private authService: AuthService,
   ) { }
   ngOnInit(): void {
 
@@ -25,6 +27,10 @@ export class AskQuestionDialogComponent implements OnInit  {
       title: ['', [Validators.required, Validators.minLength(3),]],
       description: ['', [Validators.required, Validators.maxLength(500)]]
     });
+    this.authService.userID.subscribe( res=> {
+      this.userID = res;
+    });
+
   }
 
 
@@ -38,6 +44,7 @@ export class AskQuestionDialogComponent implements OnInit  {
       description:  this.myForm.value.description,
       tags: this.formControl.value,
       questionID: uid,
+      userID: this.userID
     }
     //  console.log( taskData);
      this.queryService.createQuery(taskData).subscribe();

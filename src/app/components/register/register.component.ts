@@ -16,6 +16,7 @@ import {v4 as uuidv4} from "uuid";
 export class RegisterComponent implements OnInit {
   myForm!: FormGroup;
   userModal!: User;
+
   constructor(
     private fb: FormBuilder,
     public authService: AuthService,
@@ -32,10 +33,10 @@ export class RegisterComponent implements OnInit {
   /* Reactive form */
   reactiveForm() {
     this.myForm = this.fb.group({
-      UID:[''],
+      userID:[''],
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-     password: ['', [Validators.required, Validators.minLength(5)]]
+      password: ['', [Validators.required, Validators.minLength(5)]]
     })
   }
 
@@ -46,17 +47,16 @@ export class RegisterComponent implements OnInit {
 
   submitForm() {
     const uid = uuidv4();
-    this.myForm.value.UID = uid;
-    console.log(this.myForm.value.UID );
+    this.myForm.value.userID = uid;
    this.authService.postUser(this.myForm.value).subscribe( res => {
           this.toastr.info("Sucessfully registered..")
           console.log(res);
           this.myForm.reset();
           this.router.navigateByUrl('login');
-});
+    });
+  }
 
 
-}
 registeredUser() {
   this.router.navigateByUrl('login');
 }

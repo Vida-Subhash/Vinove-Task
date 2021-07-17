@@ -19,17 +19,102 @@
     {
       "title": "How do I generate a UUID in Angular?",
       "description": "However, the uuid package does not define a uuid class (type); it just provides utilities for generating and parsing UUIDs as strings, and for converting between string and byte array representations. So you will not be able to use the type system to ensure that values are valid UUIDs.",
-      "tags": "#angular,UUID ",
+      "tags": [
+        "angular",
+        "UUID"
+      ],
       "questionID": "4aa06639-f6db-4eb7-9fe3-d68715c450cd",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
       "id": 1
+    },
+    {
+      "title": "Typescript - How to create nested interface for json object",
+      "description": "I am trying to create nested json object for which I have created Interface.I am getting error as Type of property serservicesAndHeads are incompatible and says Property is missing. My Interface is as follows:",
+      "tags": [
+        "angular",
+        "Typescript"
+      ],
+      "questionID": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "userID": "674072e2-c986-4ec0-ab0e-684fcb362ade",
+      "id": 2
+    },
+    {
+      "title": "Angular Dropdown list validation",
+      "description": " am beginner to Angular\n\nI have a task to add validation if Dropdown list is not selected I have to hide button\n\nhere is that code\n\nbutton function",
+      "tags": [
+        "angular",
+        "angular-reactive-forms"
+      ],
+      "questionID": "3933adff-fba9-4caf-949d-21e84f0adf08",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "id": 3
     }
   ],
   "answers": [
     {
-      "questionID": "4aa06639-f6db-4eb7-9fe3-d68715c450cd",
-      "answerID": "8ab6fa6e-5e46-4d98-a816-04356d2d3f9c",
-      "answers": "> use NPM libaray",
+      "quesid": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "question": "Typescript - How to create nested interface for json object",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "Allansers": [
+        {
+          "ansID": "03b05514-f449-41b7-9e70-b684d2b6bde0",
+          "answer": "",
+          "answeredUserID": "2e297787-ea14-4e91-88dc-2971940c9f0d"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "quesid": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "question": "Typescript - How to create nested interface for json object",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "Allansers": [
+        {
+          "ansID": "03b05514-f449-41b7-9e70-b684d2b6bde0",
+          "answer": "",
+          "answeredUserID": "2e297787-ea14-4e91-88dc-2971940c9f0d"
+        }
+      ],
       "id": 3
+    },
+    {
+      "quesid": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "question": "Typescript - How to create nested interface for json object",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "Allansers": [
+        {
+          "ansID": "3f52e9a8-9030-4ae0-9d72-a67854998887",
+          "answer": "e nested json object for which I h",
+          "answeredUserID": "2e297787-ea14-4e91-88dc-2971940c9f0d"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "quesid": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "question": "Typescript - How to create nested interface for json object",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "Allansers": [
+        {
+          "ansID": "65cebd17-f1a7-4493-a3c9-d477eb517dc1",
+          "answer": null,
+          "answeredUserID": "2e297787-ea14-4e91-88dc-2971940c9f0d"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "quesid": "a7ef1fc0-eeec-4a43-99f4-6c7a02fed6db",
+      "question": "Typescript - How to create nested interface for json object",
+      "userID": "2e297787-ea14-4e91-88dc-2971940c9f0d",
+      "Allansers": [
+        {
+          "ansID": "3a988e5c-d7f4-401f-86de-d33b2c3cd50c",
+          "answer": "hgfhgfh hgfhgfhfg",
+          "answeredUserID": "2e297787-ea14-4e91-88dc-2971940c9f0d"
+        }
+      ],
+      "id": 7
     }
   ]
 }
